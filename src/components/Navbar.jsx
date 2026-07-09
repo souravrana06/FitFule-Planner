@@ -19,12 +19,16 @@ export default function Navbar({ currentPage, onNavigate }) {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between items-center h-20">
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => handleNavClick('home')}>
-            <Leaf className="text-primary" size={32} />
-            <span className="text-2xl font-bold text-primary">FitFuel</span>
+    <nav className="fixed top-4 left-4 right-4 max-w-6xl mx-auto rounded-2xl bg-[#0b0f19]/70 backdrop-blur-lg border border-white/10 shadow-xl z-50 transition-all duration-300">
+      <div className="px-6">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center gap-2 cursor-pointer group" onClick={() => handleNavClick('home')}>
+            <div className="p-1.5 rounded-lg bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500/20 transition-all duration-300">
+              <Leaf className="text-primary" size={24} />
+            </div>
+            <span className="text-xl font-bold tracking-tight text-white font-display">
+              Fit<span className="text-emerald-400">Fuel</span>
+            </span>
           </div>
 
           <div className="hidden md:flex items-center gap-1">
@@ -32,39 +36,39 @@ export default function Navbar({ currentPage, onNavigate }) {
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                className={`px-3.5 py-1.5 rounded-xl font-medium text-sm transition-all duration-200 flex items-center ${
                   currentPage === item.id
-                    ? 'bg-primary text-white'
-                    : 'text-gray-700 hover:bg-gray-100'
+                    ? 'bg-gradient-to-r from-emerald-500/20 to-indigo-500/20 border border-indigo-500/30 text-white shadow-sm shadow-indigo-500/10'
+                    : 'text-slate-400 border border-transparent hover:text-slate-100 hover:bg-white/5'
                 }`}
               >
-                <span className="mr-2">{item.icon}</span>
+                <span className="mr-1.5 text-base">{item.icon}</span>
                 {item.label}
               </button>
             ))}
           </div>
 
           <button
-            className="md:hidden text-dark"
+            className="md:hidden text-slate-300 hover:text-white transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden pb-4 border-t">
+          <div className="md:hidden pb-4 border-t border-white/5 pt-2 space-y-1">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-200 ${
+                className={`w-full text-left px-4 py-2.5 rounded-xl font-medium text-sm transition-all duration-200 flex items-center ${
                   currentPage === item.id
-                    ? 'bg-primary text-white'
-                    : 'text-gray-700 hover:bg-gray-100'
+                    ? 'bg-gradient-to-r from-emerald-500/20 to-indigo-500/20 border border-indigo-500/30 text-white'
+                    : 'text-slate-400 border border-transparent hover:text-slate-100 hover:bg-white/5'
                 }`}
               >
-                <span className="mr-2">{item.icon}</span>
+                <span className="mr-2.5 text-base">{item.icon}</span>
                 {item.label}
               </button>
             ))}

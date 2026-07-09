@@ -9,29 +9,35 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  @apply bg-light text-dark;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #05070f;
+  @apply text-slate-200 antialiased overflow-x-hidden;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+/* Modern Dark Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-100;
+  background: #080c14;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary rounded-full;
+  background: #1e293b;
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-green-600;
+  background: #3b82f6;
 }
+
+/* Global Styles */
 
 .spinner {
   border: 3px solid rgba(16, 185, 129, 0.1);
@@ -49,4 +55,12 @@ html {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.text-gradient-primary {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-teal-300 to-indigo-400;
+}
+
+.text-gradient-secondary {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400;
 }
