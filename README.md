@@ -35,7 +35,7 @@ The platform combines **Google Gemini AI** with the **Open Food Facts API** to p
 
 The landing page introduces users to FitFuel Planner and highlights its core features, including barcode scanning, AI meal planning, smart shopping assistance, and ingredient analysis.
 
-![Home Page](screenshots/home.png)
+![Home Page](screenshots/home.PNG)
 
 ---
 
@@ -52,7 +52,7 @@ Analyze ingredients, allergens, and nutritional quality.
 ### 3️⃣ Personalized Plans
 Receive customized meal plans and shopping lists.
 
-![How It Works](screenshots/how-it-works.png)
+![How It Works](screenshots/how-it-works.PNG)
 
 ---
 
@@ -75,7 +75,7 @@ The Barcode Scanner enables users to scan or manually enter product barcodes to 
 - Open Food Facts API
 - React.js
 
-![Barcode Scanner](screenshots/barcode-scanner.png)
+![Barcode Scanner](screenshots/barcode-scanner.PNG)
 
 ---
 
@@ -98,7 +98,7 @@ The Ingredient Analyzer helps users understand what goes into their food by eval
 - React.js
 - Express.js
 
-![Ingredient Analyzer](screenshots/ingredient-analyzer.png)
+![Ingredient Analyzer](screenshots/ingredient-analyzer.PNG)
 
 ---
 
@@ -125,7 +125,7 @@ Generate personalized meal plans based on:
 - Indian
 - Custom Meal Preferences
 
-![Meal Planner](screenshots/meal-planner.png)
+![Meal Planner](screenshots/meal-planner.PNG)
 
 ---
 
@@ -140,7 +140,7 @@ FitFuel Planner uses Google Gemini AI to create complete day-wise meal schedules
 
 Each plan is customized according to user goals and nutritional requirements.
 
-![Generated Meal Plan](screenshots/meal-plan-result.png)
+![Generated Meal Plan](screenshots/meal-plan-result.PNG)
 
 ---
 
@@ -155,7 +155,7 @@ The Smart Shopping List automatically organizes grocery items into categories an
 - Downloadable shopping lists
 - Meal-plan-based shopping assistance
 
-![Shopping List](screenshots/shopping-list.png)
+![Shopping List](screenshots/shopping-list.PNG)
 
 ---
 
@@ -167,7 +167,7 @@ The About section explains the mission behind FitFuel Planner and the technologi
 
 To bridge the gap between complex nutritional information and everyday food choices through AI-driven insights and personalized guidance.
 
-![About Page](screenshots/about.png)
+![About Page](screenshots/about.PNG)
 
 ---
 
